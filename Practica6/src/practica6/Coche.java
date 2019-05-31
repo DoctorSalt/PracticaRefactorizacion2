@@ -37,5 +37,20 @@ public class Coche {
 		String definicion_Coche = resultado;
 		return definicion_Coche;
 	}
+
+	private String metodoA(String modelo, String fabricante) {
+		String devuelve ="es un "+modelo+" "+fabricante+" y gasta 1,337 por litro.";
+		return devuelve;
+	}
+
+	private String metodoB(String modelo, String fabricante) {
+		String devuelve ="es un "+modelo+" "+fabricante+" y gasta 1,052 por litro.";
+		return devuelve;
+	}
+
+	private String metodoC(String modelo, String fabricante) {
+		String devuelve ="es un "+modelo+" "+fabricante+" y no necesita combustible.";
+		return devuelve;
+	}
 }
  
