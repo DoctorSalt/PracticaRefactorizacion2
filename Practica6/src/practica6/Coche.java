@@ -1,5 +1,5 @@
 package practica6;
-
+//version guardada
 public class Coche {
 	String matricula;
 	String atrib;
