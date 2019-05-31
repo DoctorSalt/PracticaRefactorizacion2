@@ -1,9 +1,10 @@
 package practica6;
-
+//Esta clase solo tien metodos get y set, y no posee de ninguna otra funcionalidad
 public class Moto {
 	String matricula;
 	int cilindrada;
 
+	//Esta clase verdaderamente no sirve más que para ser inicializada verdaderamente no hace nada
 	public Moto() {
 		matricula = "";
 		cilindrada = 0;

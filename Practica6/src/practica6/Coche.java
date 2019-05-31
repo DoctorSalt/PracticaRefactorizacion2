@@ -6,6 +6,7 @@ public class Coche {
 	String modelo;
 	String fabricante;
 
+	//Esta clase verdaderamente no sirve más que para ser inicializada verdaderametne no hace nada
 	public Coche() {
 		matricula = "";
 		atrib = "";
@@ -15,6 +16,7 @@ public class Coche {
 
 	public Coche(String m, String c, String mo, String f) {
 		matricula = m;
+		//atrib es un poco ambiguo como nombre
 		atrib = c;
 		modelo = mo;
 		fabricante = f;
@@ -22,6 +24,10 @@ public class Coche {
 
 	public String metodo1() {
 		String resultado = "";
+		//Demasiados if y else anidados y encima con el mismo atributo atrib
+		//añadir a resultado "El coche con matricula " + matricula + " "; se repite en toda la estructura
+		//se utilizan constatemente los atributos cuando se podrían hacer metodos get para recogerlos
+		//se podría tener mejor seters y geters para atrib, modelo y fabricante
 		if (atrib == "Gasolina") {
 			resultado += "El coche con matricula " + matricula + " ";
 			resultado += metodoA(modelo, fabricante);
