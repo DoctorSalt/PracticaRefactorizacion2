@@ -1,33 +1,32 @@
 package practica6;
 //Esta clase solo tien metodos get y set, y no posee de ninguna otra funcionalidad
 public class Moto {
-	String matricula;
-	int cilindrada;
+	MotoData data = new MotoData();
 
 	//Esta clase verdaderamente no sirve más que para ser inicializada verdaderamente no hace nada
 	public Moto() {
-		matricula = "";
-		cilindrada = 0;
+		data.setMatricula("");
+		data.setCilindrada(0);
 	}
 
 	public Moto(String m, int c) {
-		matricula = m;
-		cilindrada = c;
+		data.setMatricula(m);
+		data.setCilindrada(c);
 	}
 
 	public String getMatricula() {
-		return matricula;
+		return data.getMatricula();
 	}
 
 	public int getCilindrada() {
-		return cilindrada;
+		return data.getCilindrada();
 	}
 
 	public void setMatricula(String m) {
-		matricula = m;
+		data.setMatricula(m);
 	}
 
 	public void setCilindrada(int c) {
-		cilindrada = c;
+		data.setCilindrada(c);
 	}
 }

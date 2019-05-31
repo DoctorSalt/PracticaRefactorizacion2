@@ -1,46 +1,41 @@
 package practica6;
 //version guardada
 public class Coche {
-	String matricula;
-	String atrib;
-	String modelo;
-	String fabricante;
+	public static final String EL_COCHE_CON_MATRICULA = "El coche con matricula ";
+	CocheData data = new CocheData();
 
-	//Esta clase verdaderamente no sirve más que para ser inicializada verdaderametne no hace nada
 	public Coche() {
-		matricula = "";
-		atrib = "";
-		modelo = "";
-		fabricante = "";
+		data.setMatricula("");
+		data.setCombustible("");
+		data.setModelo("");
+		data.setFabricante("");
 	}
 
 	public Coche(String m, String c, String mo, String f) {
-		matricula = m;
-		//atrib es un poco ambiguo como nombre
-		atrib = c;
-		modelo = mo;
-		fabricante = f;
+		data.setMatricula(m);
+		data.setCombustible(c);
+		data.setModelo(mo);
+		data.setFabricante(f);
 	}
 
 	public String metodo1() {
 		String resultado = "";
-		//Demasiados if y else anidados y encima con el mismo atributo atrib
-		//añadir a resultado "El coche con matricula " + matricula + " "; se repite en toda la estructura
-		//se utilizan constatemente los atributos cuando se podrían hacer metodos get para recogerlos
-		//se podría tener mejor seters y geters para atrib, modelo y fabricante
-		if (atrib == "Gasolina") {
-			resultado += "El coche con matricula " + matricula + " ";
-			resultado += metodoA(modelo, fabricante);
-		} else if (atrib == "Diesel") {
-			resultado += "El coche con matricula " + matricula + " ";
-			resultado += metodoB(modelo, fabricante);
-		} else if (atrib == "Híbrido") {
-			resultado += "El coche con matricula " + matricula + " ";
-			resultado += metodoC(modelo, fabricante);
+
+		if (data.getCombustible() == "Gasolina") {
+			resultado += EL_COCHE_CON_MATRICULA + data.getMatricula() + " ";
+			resultado += metodoA(data.getModelo(), data.getFabricante());
+		} else if (data.getCombustible() == "Diesel") {
+			resultado += EL_COCHE_CON_MATRICULA + data.getMatricula() + " ";
+			resultado += metodoB(data.getModelo(), data.getFabricante());
+		} else if (data.getCombustible() == "Híbrido") {
+			resultado += EL_COCHE_CON_MATRICULA + data.getMatricula() + " ";
+			resultado += metodoC(data.getModelo(), data.getFabricante());
 		} else {
-			resultado += "El coche con matricula " + matricula + " ";
+			resultado += EL_COCHE_CON_MATRICULA + data.getMatricula() + " ";
 			resultado += "no dispone de información";
 		}
-		return resultado;
+		String definicion_Coche = resultado;
+		return definicion_Coche;
 	}
 }
+ 
